@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>散列画廊</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/gallery.js"></script>
+</head>
+ <body onselectstart="return false"><!--防止页面文字被选中-->
+	
+    <!--2, 改写视图为模板字符串-->
+	<div class="wrap" id="wrap">
+	<!--photo负责平移，旋转-->
+		<div class="photo  photo_front" onclick="turn(this)" id="photo_{{index}}">
+		<!--photo-wrap负责3D翻转-->
+		<div class="photo-wrap">
+			<div class="side side-front">
+				<p class="image"><img src="imgs/{{img}}"></p>
+				<p class="caption">{{caption}}</p>
+			</div>
+			<div class="side side-back">
+				<p class="desc">{{desc}}</p>
+			</div>
+		</div>
+		</div>
+		<div class="nav">
+		   <div class="nav-group">
+		    <span id="nav_0" class="i" onclick="turn(g('#photo_0'))" >&nbsp</span>
+			<span id="nav_1" class="i" onclick="turn(g('#photo_1'))" >&nbsp</span>
+			<span id="nav_2" class="i" onclick="turn(g('#photo_2'))" >&nbsp</span>
+			<span id="nav_3" class="i" onclick="turn(g('#photo_3'))" >&nbsp</span>
+			<span id="nav_4" class="i" onclick="turn(g('#photo_4'))" >&nbsp</span>
+			<span id="nav_5" class="i" onclick="turn(g('#photo_5'))" >&nbsp</span>
+			<span id="nav_6" class="i" onclick="turn(g('#photo_6'))" >&nbsp</span>
+			<span id="nav_7" class="i" onclick="turn(g('#photo_7'))" >&nbsp</span>
+			<span id="nav_8" class="i" onclick="turn(g('#photo_8'))" >&nbsp</span>
+			<span id="nav_9" class="i" onclick="turn(g('#photo_9'))" >&nbsp</span>
+			<span id="nav_10" class="i" onclick="turn(g('#photo_10'))" >&nbsp</span>
+			<span id="nav_11" class="i" onclick="turn(g('#photo_11'))" >&nbsp</span>
+			<span id="nav_12" class="i" onclick="turn(g('#photo_12'))" >&nbsp</span>
+			<span id="nav_13" class="i" onclick="turn(g('#photo_13'))" >&nbsp</span>
+			<span id="nav_14" class="i" onclick="turn(g('#photo_14'))" >&nbsp</span>
+			<span id="nav_15" class="i" onclick="turn(g('#photo_15'))" >&nbsp</span>
+			<span id="nav_16" class="i" onclick="turn(g('#photo_16'))" >&nbsp</span>
+			<span id="nav_17" class="i" onclick="turn(g('#photo_17'))" >&nbsp</span>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<script src="js/data.js"></script>
+	<script src="js/gallery.js"></script>
+	
+</head>
+</body> 
+</html> 

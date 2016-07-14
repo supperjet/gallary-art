@@ -1,0 +1,149 @@
+*{margin:0; padding: 0;}
+body{
+    	background-color: #fff;
+    	color: #555;
+    	font-family: 'Microsoft YaHei';
+    	-webkit-font-smoothing: antialiased;
+    	font-size: 14px;
+    }
+
+
+.wrap{
+	width: 100%;
+	height: 600px;
+	position: absolute;/*设置垂直居中的方法 */
+	top: 50%;
+	margin-top: -300px;
+	background-color: #333;
+	overflow: hidden;
+	/*设置3d场景，内部元素可以3D*/
+    -webkit-perspective: 800px;
+}
+
+/* 海报样式 */
+.photo{
+	width: 260px;
+	height: 330px;
+	position: absolute;
+	z-index: 1;
+	-webkit-box-shadow:0 0 1px rgba(0,0,0,.01);
+	-webkit-transition: all .5s;
+}
+
+.photo .side{
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+	position: absolute;
+	top: 0;
+	right: 0;
+	-webkit-box-sizing:border-box;/*内容和padding在边框之内，不会改变盒子的大小 */
+}
+.photo .side-front{
+	padding:25px;
+
+}
+.photo .side-front .image{
+	width: 100%;
+	height: 260px;
+	line-height:260px;
+	overflow: hidden;
+}
+.photo .side-front .image img{
+	width: 100%;
+
+}
+.photo .side-front .caption{
+	margin: 10px;
+	text-align: center;
+	color: #555;
+	line-height: 16px;
+}
+.photo .side-back{
+
+ background-color: #fff;
+	
+}
+.photo .side-back .desc{
+
+	padding:40px 20px 40px 20px;
+	color: #555;
+	font-size: 14px;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+
+/*当前选中的海报的样式*/
+
+.photo_center{
+	left:50%;
+	top:50%;
+	margin: -160px 0 0 -130px;
+	z-index: 999;
+}
+
+/*3D效果设置*/
+
+.photo-wrap{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    /*使子元素（两个side）支持3d效果*/
+    -webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all .6s;
+}
+.photo-wrap .side-front{
+	-webkit-transform: rotateY(0deg);
+	
+}
+.photo-wrap .side-back{
+	-webkit-transform: rotateY(180deg);}
+	
+.photo-wrap .side{
+  -webkit-backface-visibility: hidden;
+}
+
+.photo_front .photo-wrap{
+	-webkit-transform: rotateY(0deg);
+	
+}
+.photo_back .photo-wrap{
+	-webkit-transform: rotateY(180deg);
+	
+} 
+
+/*控制按钮的样式*/
+.nav{
+	width:80%;
+	line-height: 30px;
+	position: absolute;
+	left:10%;
+	bottom:20px;
+	z-index: 999;
+	
+}
+/*普通样式*/
+.nav .nav-group{
+	margin-left:18%;
+}
+.nav .i{
+    width:20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: rgba(0,0,0,.1);
+    text-align: center;
+    border-radius: 100%;
+    margin-left: 15px;
+
+}
+/*防闪动优化*/
+.photo{
+	left:50%;
+	top:50%;
+	margin:-160px 0 0 -130px;
+}
+
